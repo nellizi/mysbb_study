@@ -3,60 +3,55 @@
 <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 
 
-<!--빨간하트-->
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="crimson" class="bi bi-heart-fill" viewBox="0 0 16 16">
+하트1 <!--빨간하트-->
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="crimson" class="bi bi-heart-fill"
+     viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
 </svg>
 
 
+<br>버튼
 
-
-<form th:action="@{/post/1/likes}"  method="post">
+<form th:action="@{/post/1/likes}" method="post">
     <div>
         <input type="submit" value="1번 게시글" class="btn btn-primary my-2">
     </div>
 </form>
 
-<form th:action="@{/post/2/likes}"  method="post">
+<form th:action="@{/post/2/likes}" method="post">
     <div>
         <input type="submit" value="2번 게시글" class="btn btn-primary my-2">
     </div>
 </form>
 
-<form th:action="@{/post/3/likes}"  method="post">
+<form th:action="@{/post/3/likes}" method="post">
     <div>
         <input type="submit" value="3번 게시글" class="btn btn-primary my-2">
     </div>
 </form>
 
+
+<br>하트2
 <i class="bi bi-heart-fill"></i>
 
 
-
-
+<br>하트3====
 <!-- 클릭 시 하트 비우고 채우기 -->
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Document</title>
-
-
-</head>
+<!--
+button:hover{
+    transform: scale(1.1);}
+-->
 <body>
-<img src="heart.svg"/>
+<div id="heart"><img src="heart.svg"/></div>
 
 <script>
-
         var i = 0;
         $('img').on('click',function(){
             if(i==0){
-                $(this).attr('src','heart_fill.svg');
+           $(this).css('transform','scale(1.1)');
+            $(this).attr('src','heart_fill.svg');
                 i++;
             }else if(i==1){
                 $(this).attr('src','heart.svg');
@@ -65,11 +60,13 @@
 
         });
 
-    </script>
+
+
+
+</script>
+<br>=======
 </body>
 </html>
-
-
 
 <!-- 호버 -->
 
@@ -97,11 +94,59 @@
             color:crimson;
         }
 
+
+
+
     </style>
 
 </head>
 
+
+<br>하트4
 <body>
 <i class="bi bi-heart-fill"></i>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+
+        .bi-heart-fill{
+            font-size: 30px;
+            line-height: 30px;
+            color:crimson;
+        }
+
+
+
+    </style>
+
+</head>
+
+
+<br>하트5
+<body>
+<i class="bi bi-heart-fill"></i>
+
+<script>
+        $('.bi-heart-fill').hover(function(){
+            $(this).css('color','cadetblue');
+        }, function() {
+            $(this).css('color','crimson');
+        });
+
+
+</script>
+
 </body>
 </html>
